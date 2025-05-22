@@ -1,3 +1,4 @@
+using Business.Services;
 using Data.Contexts;
 using Data.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("BookingServiceDb")));
 builder.Services.AddScoped<IBookingRepository, BookingRepository>();
+builder.Services.AddScoped<IBookingService, BookingService>();
 
 var app = builder.Build();
 
