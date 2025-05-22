@@ -7,5 +7,4 @@ namespace Data.Repositories;
 
 public interface IBookingRepository : IBaseRepository<BookingEntity>
 {
-    Task<RepositoryResponse<BookingEntity?>> GetAsync(Expression<Func<BookingEntity>> expression);
 }

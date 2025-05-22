@@ -1,4 +1,5 @@
 using Data.Contexts;
+using Data.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

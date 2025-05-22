@@ -7,7 +7,7 @@ using System.Linq.Expressions;
 
 namespace Data.Repositories;
 
-internal class BookingRepository(DataContext context) : BaseRepository<BookingEntity>(context), IBookingRepository
+public class BookingRepository(DataContext context) : BaseRepository<BookingEntity>(context), IBookingRepository
 {
     public override async Task<RepositoryResponse<IEnumerable<BookingEntity>>> GetAllAsync()
     {
@@ -50,8 +50,4 @@ internal class BookingRepository(DataContext context) : BaseRepository<BookingEn
         }
     }
 
-    public Task<RepositoryResponse<BookingEntity?>> GetAsync(Expression<Func<BookingEntity>> expression)
-    {
-        throw new NotImplementedException();
-    }
 }
